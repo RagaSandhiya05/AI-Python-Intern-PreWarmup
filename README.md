@@ -36,7 +36,7 @@ AI-Python-Intern-PreWarmup/
     ├── basics.py
     ├── exercises.py
     ├── word_count.py
-    └── T01_python_version_venv_active
+    └── T01_python_version_venv_active.png
 ```
 
 ### ▶️ How to Run
