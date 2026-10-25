@@ -1,30 +1,49 @@
 # Student Marks Analyzer
-import csv
 import json
+import csv
 
-students = []
+from student_utils import (
+    load_students,
+    generate_summary,
+    InvalidStudentDataError
+)
 
-with open("day2/students.csv", "r", newline="") as file:
-    reader = csv.DictReader(file)
 
-    for row in reader:
-        row["marks"] = int(row["marks"])
-        students.append(row)
+def main():
+    input_file = "day2/students.csv"
+    output_file = "day2/summary.json"
 
-total_marks = sum(student["marks"] for student in students)
-average_marks = total_marks / len(students)
+    try:
+        students = load_students(input_file)
+        summary = generate_summary(students)
 
-topper = max(students, key=lambda student: student["marks"])
+        with open(
+            output_file, "w", encoding="utf-8"
+        ) as file:
+            json.dump(summary, file, indent=4)
 
-summary = {
-    "total_students": len(students),
-    "average_marks": round(average_marks, 2),
-    "topper": topper["name"],
-    "highest_marks": topper["marks"]
-}
+    except FileNotFoundError:
+        print(f"Error: Input file not found: {input_file}")
 
-with open("day2/summary.json", "w") as file:
-    json.dump(summary, file, indent=4)
+    except PermissionError:
+        print("Error: Permission denied while accessing a file.")
 
-print("Student summary generated successfully!")
-print(json.dumps(summary, indent=4))
+    except InvalidStudentDataError as error:
+        print(f"Invalid student data: {error}")
+
+    except csv.Error as error:
+        print(f"CSV processing error: {error}")
+
+    except OSError as error:
+        print(f"File operation failed: {error}")
+
+    else:
+        print("Student summary generated successfully!")
+        print(json.dumps(summary, indent=4))
+
+    finally:
+        print("CSV processing attempt completed.")
+
+
+if __name__ == "__main__":
+    main()
