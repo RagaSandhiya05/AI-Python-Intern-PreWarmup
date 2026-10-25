@@ -1,3 +1,3 @@
 Day 2 Git Practice
 Feature: Git branching and merging
-Status: Completed on main branch
+Status: Completed on main and feature branches
