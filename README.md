@@ -28,7 +28,7 @@ Day 1 focuses on setting up the Python development environment, configuring Git 
 - **Data Structures:** Lists, tuples, dictionaries, and sets
 - **Python Techniques:** String manipulation, sorting, slicing, and comprehensions
 
-### 📂 Day 1 Project Structure
+### 📂 Day 1 Learning Structure
 
 ```text
 AI-Python-Intern-PreWarmup/
@@ -90,25 +90,24 @@ Day 2 focuses on handling structured data using CSV and JSON files, writing reus
 - **Version Control:** Git branching, merging, conflict resolution, stash, restore, and revert
 - **Dependency Management:** Installing and recording project dependencies in `requirements.txt`
 
-### 📂 Day 2 Project Structure
+### 📂 Day 2 Learning Structure
 
 ```text
-AI-Python-Intern-PreWarmup/
-├── day2/
-│   ├── students.csv
-│   ├── csv_to_json.py
-│   ├── student_utils.py
-│   ├── summary.json
-│   ├── oop_demo.py
-│   ├── student_performance.csv
-│   ├── numpy_intro.py
-│   ├── pandas_intro.py
-│   ├── sorted_student_performance.csv
-│   └── subject_averages.csv
-└── requirements.txt
+day2/
+├── T10_Git_History.png
+├── csv_to_json.py
+├── git-practice.txt
+├── numpy_intro.py
+├── oop_demo.py
+├── pandas_intro.py
+├── sorted_student_performance.csv
+├── student_performance.csv
+├── student_utils.py
+├── students.csv
+├── subject_averages.csv
+└── summary.json
 ```
 
-*Note: Git practice files and temporary demonstration files are not included in this structure.*
 
 ### ▶️ How to Run
 
@@ -193,29 +192,31 @@ Day 3 focuses on consuming external APIs using Python, testing HTTP requests wit
 - **Secret Management:** Using `.env`, `.env.example`, and `.gitignore` to prevent accidental exposure of sensitive values
 - **Dependency Management:** Recording project dependencies in `requirements.txt`
 
-### 📂 Day 3 Project Structure
+### 📂 Day 3 Learning Structure
 
 ```text
-AI-Python-Intern-PreWarmup/
-└── day3/
-    ├── api_notes.md
-    ├── weather_api.py
-    ├── api_testing.md
-    ├── requirements.txt
-    ├── app/
-    │   └── main.py
-    ├── test_env.py
-    ├── .env.example
-    ├── .gitignore
-    └── screenshots/
-        ├── 01_get_weather.png
-        ├── 02_post_request.png
-        ├── 03_error_response.png
-        ├── 04_fastapi_swagger.png
-        ├── 05_health_check.png
-        ├── 06_get_item.png
-        ├── 07_create_item.png
-        └── 08_validation_error.png
+day3/
+├── app/
+│   └── main.py
+├── screenshots/
+│   ├── 01_get_weather.png
+│   ├── 02_post_request.png
+│   ├── 03_error_response.png
+│   ├── 04_fastapi_swagger.png
+│   ├── 05_health_check.png
+│   ├── 06_get_item.png
+│   ├── 07_create_item.png
+│   └── 08_validation_error.png
+├── .dockerignore
+├── .env.example
+├── .gitignore
+├── Dockerfile
+├── api_notes.md
+├── api_testing.md
+├── docker-compose.yml
+├── requirements.txt
+├── test_env.py
+└── weather_api.py
 ```
 
 *Note: The `.env` file stores local environment variables and is excluded from version control to protect sensitive information. The `.env.example` file provides a template without exposing actual secrets.*
@@ -280,5 +281,134 @@ Ensure that `day3/.env` exists locally and contains the required configuration v
 - Managed application configuration using environment variables and `python-dotenv`.
 - Practiced secure secret management using `.env.example` and `.gitignore`.
 - Documented API development workflows and organized practical evidence through screenshots.
+
+---
+
+## 📅 Day 4 – Docker, Containerization & Git Collaboration
+
+Day 4 focuses on understanding Docker fundamentals, practicing essential Docker CLI commands, containerizing the FastAPI application developed on Day 3, running multiple services using Docker Compose, and practicing Git collaboration workflows through branches, pull requests, code reviews, and GitHub Issues.
+
+### 📌 Tasks Completed
+
+| **Task** | **Topic** | **File / Resource** | **Description** |
+| -------- | --------- | ------------------- | --------------- |
+| T16 | Docker Fundamentals | Docker Desktop, `docker --version`, `docker info` | Installed and verified Docker Desktop, checked Docker Engine availability, and explored basic containerization concepts. |
+| T17 | Docker CLI Commands | [`docker_cheatsheet.md`](day4/docker_cheatsheet.md), `screenshots/` | Practiced essential Docker commands for working with images and containers, including running containers, listing active containers, and mapping ports. |
+| T18 | FastAPI Containerization | [`Dockerfile`](day3/Dockerfile), [`.dockerignore`](day3/.dockerignore) | Created a Docker image for the FastAPI application, configured the required dependencies, and ran the container with port mapping to access the API. |
+| T19 | Docker Compose | [`docker-compose.yml`](day3/docker-compose.yml) | Used Docker Compose to build and run the FastAPI service alongside a Redis container, practicing multi-container application setup. |
+| T20 | Git Collaboration | [`collaboration-practice.md`](day4/collaboration-practice.md), [Pull Request #1](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/pull/1), [Issue #2](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/issues/2) | Practiced creating a feature branch, committing and pushing changes, opening a pull request, submitting a review comment, merging into `main`, and creating a GitHub Issue. |
+
+### 🛠️ Concepts & Skills Practiced
+
+- **Docker Fundamentals:** Images, containers, registries, port mapping, and container lifecycle.
+- **Docker CLI:** Running containers, listing containers, inspecting images, and managing container execution.
+- **Dockerfile:** Defining a Python base image, setting a working directory, installing dependencies, copying application files, and configuring the startup command.
+- **`.dockerignore`:** Excluding unnecessary files and local configuration from the Docker build context.
+- **FastAPI Containerization:** Building a Docker image and exposing the API through a mapped port.
+- **Docker Compose:** Defining and running multiple services, including FastAPI and Redis.
+- **Git Branching:** Creating and working with feature branches.
+- **Pull Requests:** Proposing changes, reviewing code or documentation, and merging changes into the main branch.
+- **Code Review:** Adding review comments and understanding the feedback workflow.
+- **GitHub Issues:** Creating issues to track documentation and follow-up work.
+
+### 📂 Day 4 Learning Structure
+
+```text
+AI-Python-Intern-PreWarmup/
+└── day4/
+    ├── collaboration-practice.md
+    ├── docker_cheatsheet.md
+    └── screenshots/
+        ├── docker-ps-running-container.png
+        ├── fastapi-docker-container.png
+        ├── fastapi-docker-docs.png
+        ├── fastapi-docker-health.png
+        ├── github-issue.png
+        ├── merged-pull-request.png
+        └── nginx-welcome.png
+```
+
+*Note: The screenshots folder contains evidence of Docker container execution, FastAPI testing, the Nginx welcome page, and GitHub collaboration activities. The Dockerfile, `.dockerignore`, and Docker Compose configuration are maintained separately for the FastAPI containerization tasks.*
+
+### ▶️ How to Run
+
+Run Docker commands from the repository root unless otherwise specified. Ensure Docker Desktop is running before executing the commands.
+
+**1. Verify Docker installation**
+
+```powershell
+docker --version
+docker compose version
+docker info
+```
+
+**2. Run a test container**
+
+```powershell
+docker run hello-world
+```
+
+**3. Run the Nginx container**
+
+```powershell
+docker run -d --name day4-nginx -p 8080:80 nginx
+docker ps
+```
+
+Open [http://localhost:8080](http://localhost:8080) in your browser to view the Nginx welcome page.
+
+**4. Build the FastAPI Docker image**
+
+```powershell
+docker build -t intern-warmup-api ./day3
+```
+
+**5. Run the FastAPI container**
+
+```powershell
+docker run -d --name intern-warmup-api -p 8000:8000 intern-warmup-api
+```
+
+Open [http://localhost:8000/docs](http://localhost:8000/docs) to explore the FastAPI Swagger UI.
+
+**6. Start FastAPI and Redis using Docker Compose**
+
+```powershell
+docker compose -f day3/docker-compose.yml up --build -d
+```
+
+Check the running services:
+
+```powershell
+docker compose -f day3/docker-compose.yml ps
+```
+
+Stop the Compose services when finished:
+
+```powershell
+docker compose -f day3/docker-compose.yml down
+```
+
+*Note: If you already have containers using the same names or ports, stop or remove the conflicting containers before running the commands. Avoid running the standalone FastAPI container and the Compose version simultaneously if both use host port 8000.*
+
+### 📚 Learning Resources
+
+- [Docker Get Started](https://docs.docker.com/get-started/)
+- [Docker CLI Reference](https://docs.docker.com/reference/cli/docker/)
+- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- [Docker Compose Documentation](https://docs.docker.com/compose/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Redis Documentation](https://redis.io/docs/)
+- [GitHub Pull Requests Documentation](https://docs.github.com/en/pull-requests)
+- [GitHub Issues Documentation](https://docs.github.com/en/issues)
+
+### ✅ Day 4 Outcome
+
+- Understood Docker fundamentals and verified the Docker environment.
+- Practiced running and inspecting containers using Docker CLI commands.
+- Containerized the FastAPI application using a Dockerfile and `.dockerignore`.
+- Ran FastAPI and Redis services together using Docker Compose.
+- Practiced Git branching, pushing changes, creating and reviewing pull requests, and merging changes into `main`.
+- Created a GitHub Issue and organized screenshots as evidence of the completed learning tasks.
 
 ---
