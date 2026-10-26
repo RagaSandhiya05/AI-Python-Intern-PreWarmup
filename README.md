@@ -36,7 +36,7 @@ AI-Python-Intern-PreWarmup/
     ├── basics.py
     ├── exercises.py
     ├── word_count.py
-    └── T01_python_version_venv_active
+    └── T01_python_version_venv_active.png
 ```
 
 ### ▶️ How to Run
@@ -162,5 +162,123 @@ python day2/pandas_intro.py
 - Performed numerical operations and tabular data analysis using NumPy and pandas.
 - Generated processed datasets and summary output files.
 - Practiced Git workflows for managing branches, resolving conflicts, and handling changes.
+
+---
+
+## 📅 Day 3 – API Integration, Testing & Development
+
+Day 3 focuses on consuming external APIs using Python, testing HTTP requests with Postman and cURL, building REST APIs using FastAPI, and managing secrets securely through environment variables.
+
+### 📌 Tasks Completed
+
+| **Task** | **Topic** | **File / Resource** | **Description** |
+| -------- | --------- | ------------------- | --------------- |
+| T11 | API Fundamentals | `api_notes.md` | Studied API concepts, REST architecture, HTTP methods, status codes, request headers, JSON responses, and API communication. |
+| T12 | API Consumption | [`weather_api.py`](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/blob/main/day3/weather_api.py), `requirements.txt` | Consumed the Open-Meteo weather API using Python's `requests` library, processed JSON responses, and implemented request error handling. |
+| T13 | API Testing | `api_testing.md`, `screenshots/` | Tested GET and POST requests using Postman and cURL, inspected response bodies and headers, and tested an HTTP 404 error response. |
+| T14 | FastAPI Development | [`app/main.py`](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/blob/main/day3/app/main.py) | Built a REST API using FastAPI with health-check, item retrieval, and item creation endpoints, including request validation using Pydantic. |
+| T15 | Secrets & Environment Variables | `.env`, `.env.example`, `.gitignore`, `test_env.py` | Practiced loading environment variables using `python-dotenv`, protecting sensitive values with `.gitignore`, and creating an example environment configuration file. |
+
+### 🛠️ Concepts & Skills Practiced
+
+- **API Fundamentals:** REST APIs, client-server communication, endpoints, HTTP methods, request parameters, headers, and JSON
+- **API Consumption:** Sending GET requests using Python's `requests` library and processing API responses
+- **Error Handling:** Request timeouts, connection errors, unsuccessful HTTP responses, and response validation
+- **API Testing:** Testing GET and POST requests using Postman and cURL
+- **HTTP Status Codes:** Understanding successful responses, resource-not-found errors, and request validation errors
+- **FastAPI:** Creating REST API endpoints, defining route parameters, returning JSON responses, and running a development server with Uvicorn
+- **Pydantic:** Validating request data, enforcing field constraints, and handling invalid input
+- **Swagger UI:** Exploring interactive API documentation and testing endpoints through `/docs`
+- **Environment Variables:** Loading configuration values using `python-dotenv` and `os.environ` / `os.getenv()`
+- **Secret Management:** Using `.env`, `.env.example`, and `.gitignore` to prevent accidental exposure of sensitive values
+- **Dependency Management:** Recording project dependencies in `requirements.txt`
+
+### 📂 Day 3 Project Structure
+
+```text
+AI-Python-Intern-PreWarmup/
+└── day3/
+    ├── api_notes.md
+    ├── weather_api.py
+    ├── api_testing.md
+    ├── requirements.txt
+    ├── app/
+    │   └── main.py
+    ├── test_env.py
+    ├── .env.example
+    ├── .gitignore
+    └── screenshots/
+        ├── 01_get_weather.png
+        ├── 02_post_request.png
+        ├── 03_error_response.png
+        ├── 04_fastapi_swagger.png
+        ├── 05_health_check.png
+        ├── 06_get_item.png
+        ├── 07_create_item.png
+        └── 08_validation_error.png
+```
+
+*Note: The `.env` file stores local environment variables and is excluded from version control to protect sensitive information. The `.env.example` file provides a template without exposing actual secrets.*
+
+### ▶️ How to Run
+
+Run the following commands from the repository's root directory after activating your virtual environment.
+
+**1. Install the required dependencies**
+
+```bash
+python -m pip install -r day3/requirements.txt
+```
+
+**2. Run the weather API client**
+
+```bash
+python day3/weather_api.py
+```
+
+**3. Run the FastAPI application**
+
+```bash
+cd day3
+python -m uvicorn app.main:app --reload
+```
+
+**4. Open the interactive API documentation**
+
+Visit [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) after starting the FastAPI server to explore and test the available endpoints.
+
+**5. Test environment variable loading**
+
+Open a separate terminal from the repository root and run:
+
+```bash
+python day3/test_env.py
+```
+
+Ensure that `day3/.env` exists locally and contains the required configuration values before running the environment variable test.
+
+### 📚 Learning Resources
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [Requests Documentation](https://requests.readthedocs.io/en/latest/)
+- [Open-Meteo API Documentation](https://open-meteo.com/en/docs)
+- [Postman Learning Center](https://learning.postman.com/)
+- [cURL Documentation](https://curl.se/docs/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Pydantic Documentation](https://docs.pydantic.dev/latest/)
+- [python-dotenv on PyPI](https://pypi.org/project/python-dotenv/)
+- [Python `os` Module](https://docs.python.org/3/library/os.html)
+- [Git Documentation](https://git-scm.com/doc)
+
+### ✅ Day 3 Outcome
+
+- Consumed an external weather API using Python and processed JSON responses.
+- Tested HTTP requests and inspected API responses using Postman and cURL.
+- Developed a REST API with FastAPI and implemented health-check, retrieval, and creation endpoints.
+- Applied Pydantic validation to incoming request data and tested error responses.
+- Explored interactive API documentation using Swagger UI.
+- Managed application configuration using environment variables and `python-dotenv`.
+- Practiced secure secret management using `.env.example` and `.gitignore`.
+- Documented API development workflows and organized practical evidence through screenshots.
 
 ---
