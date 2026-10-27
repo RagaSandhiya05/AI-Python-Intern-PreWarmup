@@ -6,7 +6,7 @@ This project demonstrates Python API development, HTTP requests, environment-bas
 
 ## System Architecture
 
-![alt text](<mermaid-diagram (6).png>)
+<img width="1104" height="2450" alt="mermaid-diagram (6)" src="https://github.com/user-attachments/assets/a69f4ac9-7b03-4b4c-b2d5-f961c71e49e0" />
 
 ## Features
 
