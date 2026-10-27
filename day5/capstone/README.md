@@ -411,4 +411,4 @@ Through this project, I practised:
 
 The Weather Summary API demonstrates the development of a Python-based REST service that integrates external weather data, processes the results, and returns structured JSON responses. Docker containerization makes the application easier to run in a consistent environment, while FastAPI's interactive documentation simplifies endpoint testing.
 
-This project provided practical experience in API development, external service integration, configuration management, error handling, testing, and containerization.
+This project provided practical experience in API development, external service integration, configuration management, error handling, testing, and containerization. This implementation strengthened my understanding of building, testing, documenting, and deploying Python APIs using Docker.
