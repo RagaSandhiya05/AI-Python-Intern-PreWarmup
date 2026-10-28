@@ -412,3 +412,161 @@ docker compose -f day3/docker-compose.yml down
 - Created a GitHub Issue and organized screenshots as evidence of the completed learning tasks.
 
 ---
+
+## 📅 Day 5 – Documentation, HTTPX & Containerized API
+
+Day 5 focuses on exploring official technical documentation, learning a new Python library, building a weather summary REST API using FastAPI and HTTPX, containerizing the application using Docker, and completing GitHub documentation and Pull Request workflows.
+
+### 📌 Tasks Completed
+
+| Task | Topic | File / Resource | Description |
+|---|---|---|---|
+| T21 | Documentation Scavenger Hunt | [`docs_hunt.md`](docs_hunt.md) | Explored official documentation for Python, Requests, FastAPI, Docker, and Git to understand important features and commands. |
+| T22 | Learn a New Python Library | [`new_library_demo.py`](new_library_demo.py), [`new_library_reflection.md`](new_library_reflection.md) | Learned HTTPX, made an HTTP GET request to a sample API, processed the JSON response, and handled HTTP errors. |
+| T23 | Mini-Project: Containerized API | [`capstone/`](capstone/) | Built a Weather Summary API using FastAPI and HTTPX, integrated Open-Meteo APIs, processed weather data, handled errors, and containerized the application using Docker. |
+| T24 | README, GitHub Pull Request & Demo | [`capstone/README.md`](capstone/README.md), [GitHub Pull Request](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/pulls), [`capstone/screenshots/`](capstone/screenshots/) | Documented the API setup and usage, created a feature branch, submitted and merged a Pull Request, and prepared a five-minute mentor demonstration. |
+
+### 🛠️ Concepts & Skills Practiced
+
+**Technical Documentation:** Navigating official documentation, locating relevant information, and recording findings.
+
+**HTTPX:** Sending HTTP requests, setting request timeouts, processing JSON responses, and handling HTTP errors.
+
+**FastAPI:** Creating REST API endpoints, accepting query parameters, returning structured JSON responses, and documenting endpoints through Swagger UI.
+
+**External API Integration:** Using the Open-Meteo Geocoding API to obtain city coordinates and the Weather Forecast API to retrieve weather information.
+
+**Data Processing:** Extracting current weather details and calculating the average temperature from the next six hourly forecast values.
+
+**Error Handling:** Handling unknown cities, external API failures, and unexpected response data with appropriate HTTP status codes.
+
+**Environment Configuration:** Using environment variables and `python-dotenv` to configure API endpoints and request timeouts.
+
+**Docker Containerization:** Building Docker images, running containers, mapping ports, loading environment variables, and inspecting container logs.
+
+**Git & GitHub:** Creating feature branches, committing and pushing changes, opening Pull Requests, and merging changes into `main`.
+
+**Technical Documentation:** Writing a detailed README with setup instructions, sample requests and responses, a system architecture diagram, Docker commands, and testing evidence.
+
+### 📂 Day 5 Learning Structure
+
+```text
+day5/
+├── docs_hunt.md
+├── new_library_demo.py
+├── new_library_reflection.md
+└── capstone/
+    ├── main.py
+    ├── requirements.txt
+    ├── Dockerfile
+    ├── .dockerignore
+    ├── README.md
+    └── screenshots/
+        ├── 01_home_endpoint.png
+        ├── 02_weather_api_response.png
+        ├── 03_swagger_ui.png
+        ├── 04_unknown_city_error.png
+        ├── 05_docker_image_build.png
+        ├── 06_docker_container_running.png
+        ├── 07_containerized_api_response.png
+        └── T24_01_merged_pull_request.png
+```
+
+*Note: The `.env` file is used for local configuration and is not included in the repository. The `.dockerignore` file prevents it from being copied into the Docker image.*
+
+### ▶️ How to Run
+
+Run the following commands from the repository root after activating your virtual environment.
+
+**1. Install the Day 5 dependencies**
+
+```powershell
+python -m pip install httpx fastapi "uvicorn[standard]" python-dotenv
+```
+
+**2. Run the HTTPX demonstration**
+
+```powershell
+python day5/new_library_demo.py
+```
+
+**3. Start the Weather Summary API locally**
+
+```powershell
+python -m uvicorn main:app --app-dir day5/capstone --reload
+```
+
+**4. Test the API**
+
+Open the following URLs in your browser:
+
+- Home endpoint: `http://127.0.0.1:8000/`
+- Weather summary: `http://127.0.0.1:8000/weather?city=Coimbatore`
+- Swagger UI: `http://127.0.0.1:8000/docs`
+
+**5. Build the Docker image**
+
+```powershell
+docker build -t weather-summary-api:1.0 ./day5/capstone
+```
+
+**6. Run the Docker container**
+
+Ensure the `.env` file exists inside `day5/capstone/` and port `8000` is available.
+
+```powershell
+docker run -d --env-file day5/capstone/.env -p 8000:8000 --name weather-api weather-summary-api:1.0
+```
+
+Verify the container:
+
+```powershell
+docker ps
+```
+
+View its logs:
+
+```powershell
+docker logs weather-api
+```
+
+**7. Stop the Docker container**
+
+```powershell
+docker stop weather-api
+```
+
+Remove it when no longer needed:
+
+```powershell
+docker rm weather-api
+```
+
+### 📚 Learning Resources
+
+- [Python Official Documentation](https://docs.python.org/3/)
+- [HTTPX Documentation](https://www.python-httpx.org/)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [Open-Meteo API Documentation](https://open-meteo.com/en/docs)
+- [Docker Documentation](https://docs.docker.com/)
+- [Dockerfile Reference](https://docs.docker.com/reference/dockerfile/)
+- [Git Documentation](https://git-scm.com/doc)
+- [GitHub Pull Requests Documentation](https://docs.github.com/en/pull-requests)
+
+### ✅ Day 5 Outcome
+
+- Explored official technical documentation and recorded key findings.
+- Learned HTTPX and practised making HTTP requests and processing JSON responses.
+- Developed a Weather Summary API using FastAPI and integrated external weather services.
+- Implemented query parameter validation and error handling.
+- Configured application settings using environment variables.
+- Built and tested a Docker image and container for the API.
+- Documented the application with setup instructions, sample responses, and an architecture diagram.
+- Practised GitHub feature branch and Pull Request workflows.
+- Prepared a five-minute demonstration covering the API, Docker deployment, and documentation.
+
+### 🎯 Overall Learning Outcome
+
+Completed five days of hands-on preparation covering Python fundamentals, file handling, object-oriented programming, data analysis, API development, testing, Docker containerization, Git collaboration, and technical documentation as preparation for an AI Python internship.
+
+---
