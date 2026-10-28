@@ -421,10 +421,10 @@ Day 5 focuses on exploring official technical documentation, learning a new Pyth
 
 | Task | Topic | File / Resource | Description |
 |---|---|---|---|
-| T21 | Documentation Scavenger Hunt | [`docs_hunt.md`](docs_hunt.md) | Explored official documentation for Python, Requests, FastAPI, Docker, and Git to understand important features and commands. |
-| T22 | Learn a New Python Library | [`new_library_demo.py`](new_library_demo.py), [`new_library_reflection.md`](new_library_reflection.md) | Learned HTTPX, made an HTTP GET request to a sample API, processed the JSON response, and handled HTTP errors. |
-| T23 | Mini-Project: Containerized API | [`capstone/`](capstone/) | Built a Weather Summary API using FastAPI and HTTPX, integrated Open-Meteo APIs, processed weather data, handled errors, and containerized the application using Docker. |
-| T24 | README, GitHub Pull Request & Demo | [`capstone/README.md`](capstone/README.md), [GitHub Pull Request](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/pulls), [`capstone/screenshots/`](capstone/screenshots/) | Documented the API setup and usage, created a feature branch, submitted and merged a Pull Request, and prepared a five-minute mentor demonstration. |
+| T21 | Documentation Scavenger Hunt | [`docs_hunt.md`](day5/docs_hunt.md) | Explored official documentation for Python, Requests, FastAPI, Docker, and Git to understand important features and commands. |
+| T22 | Learn a New Python Library | [`new_library_demo.py`](day5/new_library_demo.py), [`new_library_reflection.md`](day5/new_library_reflection.md) | Learned HTTPX, made an HTTP GET request to a sample API, processed the JSON response, and handled HTTP errors. |
+| T23 | Mini-Project: Containerized API | [`capstone/`](day5/capstone/) | Built a Weather Summary API using FastAPI and HTTPX, integrated Open-Meteo APIs, processed weather data, handled errors, and containerized the application using Docker. |
+| T24 | README, GitHub Pull Request & Demo | [`capstone/README.md`](day5/capstone/README.md), [GitHub Pull Requests](https://github.com/RagaSandhiya05/AI-Python-Intern-PreWarmup/pulls), [`capstone/screenshots/`](day5/capstone/screenshots/) | Documented the API setup and usage, created a feature branch, submitted and merged a Pull Request, and prepared a five-minute mentor demonstration. |
 
 ### 🛠️ Concepts & Skills Practiced
 
